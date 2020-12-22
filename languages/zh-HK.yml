@@ -12,10 +12,14 @@ nav:
 # 巡覽列選單
 menu:
   home: 首頁
+  article: 文章
   archives: 歸檔
   categories: 分類
   tags: 標籤
+  personal: 個人
   about: 關於
+  others: 其他...
+  leavenote: 留言板
 
 # 歸檔頁、分類頁、標籤頁
 page:
@@ -46,6 +50,7 @@ social:
   wechat: 微信
   telegram: Telegram
   qq: QQ
+  csdn: CSDN
 
 # 文章
 post:

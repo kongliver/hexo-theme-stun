@@ -22,7 +22,7 @@ canonical: true
 # ---------------------------------------------------------------
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-google_site_verification:
+google_site_verification: MUF0Rt6V-U-Yt0gCXwwA3wxu7VfPs37Pyso2BH0anrE
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -30,7 +30,7 @@ bing_site_verification:
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification:
+baidu_site_verification: code-evYy45A5k6
 
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
@@ -51,7 +51,9 @@ sougou_site_verification:
 # Select your icon name, see: https://fontawesome.com/icons
 menu:
   home: / || fas fa-home
-  archives: /archives/ || fas fa-folder-open
+  article: javascript:; || fas fa-feather-alt
+  personal: javascript:; || fas fa-fingerprint
+  others: javascript:; || fas fa-angle-double-down
   # categories: /categories/ || fas fa-layer-group
   # tags: /tags/ || fas fa-tags
   # You can add a secondary menu like follow.
@@ -63,6 +65,14 @@ submenu:
   # xxx1:
   #   xxx1-1: /xxx1-1/ || fa(s|r|l|d|b) fa-xxx
   #   xxx1-2: /xxx1-2/ || fa(s|r|l|d|b) fa-xxx
+  article:
+    archives: /archives/ || fas fa-folder-open
+    categories: /categories/ || fas fa-layer-group
+    tags: /tags/ || fas fa-tags
+  personal:
+    about: /about/ || far fa-id-card
+  others:
+    leavenote: /leavenote/ || fas fa-book-open
 
 menu_settings:
   # Only show by icon.
@@ -75,8 +85,8 @@ menu_settings:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/icons/favicon-16x16.png
-  medium: /images/icons/favicon-32x32.png
+  small: /assets/favicon/favicon-16x16.ico
+  medium: /assets/favicon/favicon-32x32.ico
   # ! --------------------------------------------------
   # ! If you don't know the following, please ignore it.
   # ! --------------------------------------------------
@@ -87,7 +97,7 @@ favicon:
 # Progressive Web Apps
 # See: https://github.com/lavas-project/hexo-pwa/
 pwa:
-  enable: false
+  enable: true
   manifest: /manifest.json
   # (Please use "" to wrap the value)
   theme_color: "#54bcff"
@@ -109,9 +119,9 @@ night_mode:
 # The layout for sidebar and content of site.
 layout:
   # The width of the content area in website.
-  content: 768px
+  content: 968px
   # The width of the sidebar in website.
-  sidebar: 300px
+  sidebar: 280px
   # The width between the content and the sidebar.
   content_sidebar_gap: 30px
   # The padding property of the main tag.
@@ -138,16 +148,16 @@ header:
   height: 80%
   # Background image of site header.
   bg_image:
-    enable: false
+    enable: true
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
+    url: /assets/header-bg2.jpg
   # Mask effect of the background image.
   mask:
-    enable: false
+    enable: true
     # Opacity of the mask (value: 0 ~ 1)
-    opacity: 0.5
+    opacity: 0.4
   nav:
     # Height of the navigation bar (Supports all CSS units)
     height: 50px
@@ -155,7 +165,7 @@ header:
     bg_color: "#333"
   # The icon that prompts the user to pull down.
   scroll_down_icon:
-    enable: false
+    enable: true
     # Icon name in FontAwesome, see: https://fontawesome.com/icons
     name: fas fa-angle-down
     animation: true
@@ -164,22 +174,22 @@ header:
 body:
   # Background image of site body.
   bg_image:
-    enable: false
+    enable: true
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
+    url: /assets/body-bg.jpg
     # Whether to fixed the background image.
     fixed: true
     # Whether to repeat the image as much as possible to cover the entire area.
     repeat: false
   # Mask effect of the background image.
   mask:
-    enable: false
+    enable: true
     # Opacity of mask (value: 0 ~ 1)
     opacity:
       # Opacity of the mask by default.
-      default: 0.1
+      default: 0.04
       # Opacity of the mask in night mode.
       night_mode: 0.6
 
@@ -201,9 +211,9 @@ footer:
   copyright:
     enable: true
     # If not set, will be used `author` from Hexo main config (e.g. liuyib All Rights Reserved)
-    text:
+    text: <a href="https://github.com/kongliver" rel="noopener" target="_blank">kongliver</a>
     # Start time. If not set, the current year will be used.
-    since:
+    since: 2020
     # End time. If not set, the current year will be used.
     end:
   # The icon between the copyright and the owner.
@@ -212,7 +222,7 @@ footer:
     # Icon name in FontAwesome, see: https://fontawesome.com/icons
     name: fas fa-heart
     # Heartbeat animation.
-    animation: false
+    animation: true
     # (Please use "" to wrap the value)
     color: "#ff0000"
   # Hexo link
@@ -250,7 +260,7 @@ creative_commons:
   #   it | lv | lt | hu | nl | no | pt | pt_BR | pl | ro | sl | fi | sv
   #   tr | is | cs | el | be | ru | zh | zh_TW | uk | ar | fa | bn | ja | ko
   # If not set, `en` will be used by default.
-  language:
+  language: zh
 
 # Back to top
 back2top:
@@ -273,7 +283,7 @@ back2top:
 sidebar:
   enable: true
   # Optional values: left | right
-  position: right
+  position: left
   # The distance from the top of the page when the sidebar is fixed (Only `px` unit is supported)
   offsetTop: 20px
   # Whether to show horizon line.
@@ -286,16 +296,16 @@ author:
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: /images/icons/stun-logo.svg
+    url: /assets/head-photo.png
     # If true, the avatar would be displayed in a circle.
-    rounded: false
+    rounded: true
     # Opacity of avatar (value: 0 ~ 1)
     opacity: 1
     # Mouse hover animation
     # Optional values: turn | shake
-    animation: turn
+    animation: shake
   # Your favorite motto.
-  motto: hello world
+  motto: begin with hello world,end in the world I love
 
 # Social links
 # Value before `||` is the target link, value after `||` is the name of FontAwesome icon.
@@ -304,19 +314,20 @@ author:
 # If you can`t find a suitable icon, you can choose to display text by adding the `origin:` prefix.
 # e.g. `origin:sf`, so `sf` will be displayed.
 social:
-  github: https://github.com/ || fab fa-github
-  google: https://plus.google.com/ || fab fa-google
-  twitter: https://twitter.com/ || fab fa-twitter
-  youtube: https://youtube.com/ || fab fa-youtube
+  github: https://github.com/kongliver || fab fa-github
+  # google: https://plus.google.com/ || fab fa-google
+  twitter: https://twitter.com/kong75441977 || fab fa-twitter
+  # youtube: https://youtube.com/ || fab fa-youtube
   # segmentfault: https://segmentfault.com/ || origin:sf
   # weibo: https://weibo.com/ || fab fa-weibo
   # zhihu: https://www.zhihu.com/ || origin:知
   # wechat: yournumber || fab fa-weixin
   # telegram: yournumber || fab fa-telegram
   # qq: yournumber || fab fa-qq
+  csdn: https://blog.csdn.net/weixin_42233500 || origin:CSDN
 
 social_setting:
-  enable: false
+  enable: true
   # Only show by icon.
   icon_only: true
 
@@ -324,11 +335,11 @@ social_setting:
 toc:
   enable: true
   # Automatically add list number to toc.
-  list_number: true
+  list_number: false
   # If true, all words will be placed on the next lines when they overflow.
   wrap: true
   # If true, the toc of post will always be displayed, rather than the activated part of it.
-  expand_all: false
+  expand_all: true
   # Minimum heading depth of generated toc.
   # You can also set it in Front-matter by `toc_max_depth`.
   min_depth: 1
@@ -363,7 +374,7 @@ codeblock:
   style: default
   # The theme of code highlight.
   # Optional values: light | dark | ocean
-  highlight: light
+  highlight: ocean
   # Whether to wrap when code overflow.
   word_wrap: false
 
@@ -399,7 +410,7 @@ post_meta:
   # Dependency: https://github.com/willin/hexo-wordcount/
   # !!! Don't enable this before install dependency by `npm install hexo-wordcount --save` in hexo root directory.
   reading_time:
-    enable: false
+    enable: true
     # Icon name in FontAwesome, see: https://fontawesome.com/icons
     icon: far fa-clock
     # Set reading speed to count reading time.
@@ -412,7 +423,7 @@ post_meta:
   # Dependency: https://github.com/willin/hexo-wordcount/
   # !!! Don't enable this before install dependency by `npm install hexo-wordcount --save` in hexo root directory.
   word_count:
-    enable: false
+    enable: true
     # Icon name in FontAwesome, see: https://fontawesome.com/icons
     icon: far fa-file-word
 
@@ -424,7 +435,7 @@ post_list:
     archives: false
   # Whether to show the cover image of post.
   cover_image:
-    home: false
+    home: true
 
 # The widget of post.
 post_widget:
@@ -439,7 +450,7 @@ post_widget:
   share:
     enable: false
     # The text displayed before the share button.
-    label: "Share to: "
+    label: "分享到: "
     # Optional values: qzone | qq | weibo | wechat | douban | linkedin | facebook | twitter | google
     target: qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google
 
@@ -504,17 +515,17 @@ waline:
 # Valine
 # See: https://valine.js.org/quickstart.html
 valine:
-  enable: false
+  enable: true
   # Your leancloud application appid.
-  appid:
+  appid: 1cY6NvTqmmVrGxl8RW3q2GTc-gzGzoHsz
   # Your leancloud application appkey.
-  appkey:
+  appkey: 0rl3zyJ99W8OFw3Qx5xPkbbg
   # Mail notifier.
   notify: true
   # Verification code.
   verify: true
   # Comment box placeholder.
-  placeholder: Just go go
+  placeholder: Please make your own comments!
   # Gravatar style.
   avatar: mp
   # Custom comment header.
@@ -526,7 +537,7 @@ valine:
   # Whether to record the commenter IP.
   recordIP: false
   # Optional values: en | zh-cn
-  language:
+  language: zh-cn
 
 # MiniValine
 # See: https://github.com/MiniValine/MiniValine#Options
@@ -607,7 +618,7 @@ fbcomments:
 # Busuanzi statistics
 # See: https://busuanzi.ibruce.info/
 busuanzi:
-  enable: false
+  enable: true
   # Only show by icon.
   icon_only: false
   # Number of unique visitor to the entire site.
@@ -626,11 +637,11 @@ busuanzi:
 
 # Google analytics ID
 # See: https://analytics.google.com/
-google_analytics:
+google_analytics: UA-177804942-1
 
 # Baidu analytics ID
 # See: https://tongji.baidu.com/
-baidu_analytics:
+baidu_analytics: fb7712e083d1c4ddec8cd43af8962ba7
 
 # Tencent analytics ID
 # See: https://v2.ta.qq.com/
@@ -654,14 +665,14 @@ algolia_search:
 # Local Search
 # See: https://github.com/wzpan/hexo-generator-search/
 local_search:
-  enable: false
+  enable: true
 
 # Auxiliary search buttons
 # ! -----------------------------------------------------------------------------------------
 # ! This feature can only be enabled if either `algolia_search` or `local_search` is enabled.
 # ! -----------------------------------------------------------------------------------------
 assist_search:
-  enable: false
+  enable: true
   # Show the Google Search button. Use `www.google.com` to search for what you type.
   google: true
   # Show the Bing Search button. Use `www.bing.com` to search for what you type.
@@ -748,7 +759,7 @@ zoom_image:
 #   you can enable this to show images in waterfalls flow.
 # See: https://github.com/desandro/masonry/
 gallery_waterfall:
-  enable: false
+  enable: true
   col_width: 220px
   gap_x: 10px
   gap_y: 10px
@@ -756,14 +767,14 @@ gallery_waterfall:
 # Lazy load the images of post.
 # See: https://github.com/tuupola/lazyload
 lazyload:
-  enable: false
+  enable: true
   # Optional values: gif | block
   placeholder: gif
 
 # Quicklink support
 # See: https://github.com/GoogleChromeLabs/quicklink/
 quicklink:
-  enable: false
+  enable: true
   # Quicklink (quicklink.umd.js script) is loaded on demand.
   # Add `quicklink: true` in Front-matter of the page or post you need.
   # Home page and archive page can be controlled through home and archive options below.
@@ -790,9 +801,9 @@ quicklink:
 # Pjax
 # See: https://github.com/MoOx/pjax/
 pjax:
-  enable: false
+  enable: true
   # When switching pages, scroll to the bottom of the top image.
-  avoid_banner: false
+  avoid_banner: true
   # ! --------------------------------------------------
   # ! If you don't know the following, please ignore it.
   # ! --------------------------------------------------
@@ -832,7 +843,7 @@ shortcuts:
   # `Ctrl + ←` is the shortcuts to prev post.
   # `Ctrl + →` is the shortcuts to next post.
   switch_post:
-    enable: false
+    enable: true
 
 # Tag cloud
 # If not used, comment it or ignore it.

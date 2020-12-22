@@ -12,10 +12,14 @@ nav:
 # Header menu
 menu:
   home: Home
+  article: Article
   archives: Archives
   categories: Categories
   tags: Tags
+  personal: Personal
   about: About
+  others: Others...
+  leavenote: Leavenote
 
 # Archives page, Categories page, Tags page
 page:
@@ -46,6 +50,7 @@ social:
   wechat: Wechat
   telegram: Telegram
   qq: QQ
+  csdn: CSDN
 
 # Article
 post:

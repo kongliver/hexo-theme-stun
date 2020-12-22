@@ -12,10 +12,14 @@ nav:
 # 导航栏菜单
 menu:
   home: 首页
+  article: 文章
   archives: 归档
   categories: 分类
   tags: 标签
+  personal: 个人
   about: 关于
+  others: 其他...
+  leavenote: 留言板
 
 # 归档页、分类页、标签页
 page:
@@ -46,6 +50,7 @@ social:
   wechat: 微信
   telegram: Telegram
   qq: QQ
+  csdn: CSDN
 
 # 文章
 post:
